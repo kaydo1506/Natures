@@ -1,0 +1,48 @@
+.card {
+    -webkit-perspective: 150rem;
+            perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        
+        color: white;
+        font-size: 2rem;
+
+        height: 50rem;
+        -webkit-transition: all .8s ease;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-color: blue;
+            -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        }
+    }
+    
+
+    
+
+    // when the card is hovered, the card__side will transform
+    &:hover &__side--front {
+        -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+}
