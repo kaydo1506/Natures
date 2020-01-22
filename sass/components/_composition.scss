@@ -1,0 +1,49 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+
+        // this offsets the outline/border by 2rems, 
+        // also means that it moves the outline away from the picture by 2rem
+        outline-offset: 2rem;
+
+
+       &--p1 {
+          left: 0;
+          top: -2rem; 
+       } 
+
+       &--p2 {
+        right: 0;
+        top: 2rem; 
+       } 
+
+       &--p3 {
+        left: 20%;
+        top: 10rem; 
+       } 
+
+       &:hover {
+        //  the outline css ppty acts like a "border" ppty 
+        // but it also allows allows the use of outline-offset to give a nice effect; 
+           outline: 1.5rem solid $color-primary;
+           
+           -webkit-transform: scale(1.05) translateY(-.5rem);
+                   transform: scale(1.05) translateY(-.5rem);
+           box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+           z-index: 20;
+       }
+    }
+
+    &:hover &__photo:not(:hover) {
+        -webkit-transform: scale(.95);
+                transform: scale(.95);
+    }
+}
