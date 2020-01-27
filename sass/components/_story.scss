@@ -2,13 +2,14 @@
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: $color-white;
+    background-color: rgba($color-white, .6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     -webkit-transform: skewX(-12deg);
             transform: skewX(-12deg);
+   
 
    
 
@@ -27,14 +28,63 @@
         -webkit-transform: translateX(-3rem) skewX(12deg);
         
                 transform: translateX(-3rem) skewX(12deg);
+        position: relative;
     }
 
     &__img {
         height: 100%;
+        -webkit-transform:translateX(2rem) scale(1.4);
+                transform:translateX(2rem) scale(1.4);
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        
+        &-2 {
+            -webkit-transform:translateX(-4rem) scale(1.4);
+                    transform:translateX(-4rem) scale(1.4); 
+        }
     }
     
     &__text {
         -webkit-transform: skewX(12deg);
                 transform: skewX(12deg);
     }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 20%);
+                transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
+    
+    &:hover &__img {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-filter: blur(3px) brightness(70%);
+                filter: blur(3px) brightness(70%);
+        
+       &-2 {
+        -webkit-transform:translateX(-4rem) scale(1);
+        transform:translateX(-4rem) scale(1);
+       }
+
+    }
+
 }
