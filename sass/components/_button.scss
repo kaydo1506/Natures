@@ -1,5 +1,5 @@
 .btn {
-
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -11,8 +11,14 @@
         transition: all .2s;
         position: relative;
         font-size: $default-font-size;
+
+    // Change for the <button> element, because the is an actual submit button for the forms section not an anchor tag i.e <a tag>
+        border: none;
+        cursor: pointer;
     }
     
+
+
     &:hover {
         -webkit-transform: translateY(-3px);
                 transform: translateY(-3px);
@@ -25,7 +31,9 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         -webkit-transform: translateY(-1px);
                 transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
