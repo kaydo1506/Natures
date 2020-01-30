@@ -37,7 +37,10 @@
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-        <label for="navi-toggle" class="navigation__button">MENU</label>
+        <!-- for the nav icon, we addeing a span element, a pseudo before and after elements for the line on top and under the the first line -->
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
 
         <div class="navigation__background">&nbsp;</div>
 
@@ -158,7 +161,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -198,7 +201,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">&#8358;228,000</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now&#33;</a>
+                                <a href="#popup" class="btn btn--white">Book now&#33;</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +239,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">&#8358;70,000</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now&#33;</a>
+                                <a href="#popup" class="btn btn--white">Book now&#33;</a>
                             </div>
                         </div>
                     </div>
@@ -275,7 +278,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">&#8358;100,000</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now&#33;</a>
+                                <a href="#popup" class="btn btn--white">Book now&#33;</a>
                             </div>
                         </div>
                     </div>
@@ -443,6 +446,36 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
+                <p class="popup__text">
+                    Phasellus vel quam massa. Quisque fringilla justo accumsan quam tempus, sit amet fermentum dolor
+                    commodo. Donec quis augue magna. Suspendisse posuere semper dapibus. Integer bibendum ex
+                    posuere enim commodo, faucibus cursus nulla sollicitudin. Nunc iaculis metus eget diam rhoncus, sed
+                    sodales odio ultrices. Quisque tempus aliquam elit eu blandit. Ut non luctus massa. Nunc ut
+                    imperdiet ante.
+                    Sed id auctor sapien, ac euismod diam. Curabitur metus dolor, condimentum porttitor semper ut,
+                    sagittis quis arcu. Donec id placerat nisi. Aenean quis pulvinar ante, ut feugiat magna.
+                    Nam libero nibh, finibus vel consectetur id, condimentum euismod dui. Sed aliquet molestie dolor, in
+                    viverra mauris vestibulum vitae. Aliquam pretium
+                    lobortis mi id posuere. Integer quis varius justo, et consectetur justo. Aliquam pulvinar tincidunt
+                    magna non placerat.
+
+                </p>
+                <a href="#" class="btn btn--purple">Book now</a>
+            </div>
+        </div>
+    </div>
 
 
 

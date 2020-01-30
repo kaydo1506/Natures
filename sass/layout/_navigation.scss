@@ -13,7 +13,9 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .3);
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -101,6 +103,7 @@
         }
     }
 
+    // FUNCTIONALITY
     // this symbol " ~ " is a sibling selector
     &__checkbox:checked ~ &__background {
         -webkit-transform: scale(80);
@@ -110,5 +113,60 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
+    }
+
+    // ICON
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    // This simply means thus
+    // when the checkbox is selected, we select it's brother which is the button, 
+    // then we select the buttons child which is the icon
+    // The plus sign is used to select an adjacent sibling
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+        top: 0;
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+        top: 0;
     }
 }
