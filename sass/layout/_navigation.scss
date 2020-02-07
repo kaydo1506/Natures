@@ -1,7 +1,6 @@
 .navigation {
     &__checkbox {
         display: none;
-
     }
 
     &__button {
@@ -13,9 +12,19 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -24,17 +33,25 @@
         border-radius: 50%;
         position: fixed;
         top: 6.5rem;
-        right: 6.5rem; 
+        right: 6.5rem;
         z-index: 1000;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
-        -webkit-transition: -webkit-transform .8s;
-        transition: -webkit-transform .8s;
-        -webkit-transition: -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-        
-        
+        -webkit-transition: -webkit-transform 0.8s;
+        transition: -webkit-transform 0.8s;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
@@ -46,29 +63,25 @@
 
         opacity: 0;
         width: 0;
-        -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-
     &__list {
-
         //center alignment
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        
+        transform: translate(-50%, -50%);
+
         list-style: none;
         text-align: center;
         width: 100%;
-        
     }
 
     &__item {
         margin: 1rem;
-
     }
 
     &__link {
@@ -83,10 +96,10 @@
             text-transform: uppercase;
 
             // gives the effect over the text
-            background-image: linear-gradient(120deg,transparent 0%,transparent 50%, $color-white 50%);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
             background-size: 220%;
-            -webkit-transition: all .4s;
-            transition: all .4s;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
 
             span {
                 margin-right: 1rem;
@@ -99,7 +112,7 @@
             background-position: 100%;
             color: $color-primary-2;
             -webkit-transform: translateX(1rem);
-                    transform: translateX(1rem);
+            transform: translateX(1rem);
         }
     }
 
@@ -107,7 +120,7 @@
     // this symbol " ~ " is a sibling selector
     &__checkbox:checked ~ &__background {
         -webkit-transform: scale(80);
-                transform: scale(80);
+        transform: scale(80);
     }
 
     &__checkbox:checked ~ &__nav {
@@ -131,15 +144,19 @@
 
         &::before,
         &::after {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
-            -webkit-transition: all .2s;
-            transition: all .2s;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
         }
 
-        &::before {top: -.8rem;}
-        &::after {top: .8rem;}
+        &::before {
+            top: -0.8rem;
+        }
+        &::after {
+            top: 0.8rem;
+        }
     }
 
     &__button:hover &__icon::before {
@@ -151,7 +168,7 @@
     }
 
     // This simply means thus
-    // when the checkbox is selected, we select it's brother which is the button, 
+    // when the checkbox is selected, we select it's brother which is the button,
     // then we select the buttons child which is the icon
     // The plus sign is used to select an adjacent sibling
     &__checkbox:checked + &__button &__icon {
@@ -160,13 +177,13 @@
 
     &__checkbox:checked + &__button &__icon::before {
         -webkit-transform: rotate(135deg);
-                transform: rotate(135deg);
+        transform: rotate(135deg);
         top: 0;
     }
 
     &__checkbox:checked + &__button &__icon::after {
         -webkit-transform: rotate(-135deg);
-                transform: rotate(-135deg);
+        transform: rotate(-135deg);
         top: 0;
     }
 }
