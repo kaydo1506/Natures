@@ -3,47 +3,82 @@
 
     &__photo {
         width: 55%;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
         border-radius: 2px;
         position: absolute;
         z-index: 10;
-        -webkit-transition: all .2s;
-        transition: all .2s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
 
-        // this offsets the outline/border by 2rems, 
+        // this offsets the outline/border by 2rems,
         // also means that it moves the outline away from the picture by 2rem
         outline-offset: 2rem;
 
+        @include respond(tab-port) {
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+        }
 
-       &--p1 {
-          left: 0;
-          top: -2rem; 
-       } 
+        &--p1 {
+            left: 0;
+            top: -2rem;
 
-       &--p2 {
-        right: 0;
-        top: 2rem; 
-       } 
+            @include respond(tab-port) {
+                top: -3rem;
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+            }
+        }
 
-       &--p3 {
-        left: 20%;
-        top: 10rem; 
-       } 
+        &--p2 {
+            right: 0;
+            top: 2rem;
 
-       &:hover {
-        //  the outline css ppty acts like a "border" ppty 
-        // but it also allows allows the use of outline-offset to give a nice effect; 
-           outline: 1.5rem solid $color-primary;
-           
-           -webkit-transform: scale(1.05) translateY(-.5rem);
-                   transform: scale(1.05) translateY(-.5rem);
-           box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-           z-index: 20;
-       }
+            @include respond(tab-port) {
+                top: -1rem;
+                z-index: 100;
+                transform: scale(1.3);
+                -webkit-transform: scale(1.3);
+                -moz-transform: scale(1.3);
+                -ms-transform: scale(1.3);
+                -o-transform: scale(1.3);
+            }
+        }
+
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+
+            @include respond(tab-port) {
+                left: 0;
+                top: 1rem;
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+            }
+        }
+
+        &:hover {
+            //  the outline css ppty acts like a "border" ppty
+            // but it also allows allows the use of outline-offset to give a nice effect;
+            outline: 1.5rem solid $color-primary;
+
+            -webkit-transform: scale(1.05) translateY(-0.5rem);
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+            z-index: 20;
+        }
     }
 
     &:hover &__photo:not(:hover) {
-        -webkit-transform: scale(.95);
-                transform: scale(.95);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
     }
 }
