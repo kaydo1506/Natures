@@ -13,10 +13,7 @@
 
     h2 {
         @include respond(tab-port) {
-            display: inline-block;
-            padding-top: 3rem;
-            padding-bottom: 1rem;
-            font-size: 3rem;
+            display: none;
         }
     }
 
@@ -49,6 +46,7 @@
 
         @include respond(tab-port) {
             padding: 3rem;
+            width: 100%;
         }
     }
 
