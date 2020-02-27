@@ -779,18 +779,6 @@ body {
   visibility: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .popup h2 {
-    /*600px*/ }
-    @media (max-width: 37.5em) {
-      .popup h2 {
-        position: relative;
-        left: 7rem; } }
-  .popup .btn--purple {
-    /*600px*/ }
-    @media (max-width: 37.5em) {
-      .popup .btn--purple {
-        position: relative;
-        left: 16rem; } }
   .popup__content {
     position: absolute;
     top: 50%;
