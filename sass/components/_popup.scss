@@ -1,6 +1,5 @@
 .popup {
-
-    background-color: rgba($color-black, .8);
+    background-color: rgba($color-black, 0.8);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -9,30 +8,50 @@
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 
+    h2 {
+        @include respond(phone) {
+            position: relative;
+            left: 7rem;
+        }
+    }
+
+    .btn--purple {
+        @include respond(phone) {
+            position: relative;
+            left: 16rem;
+        }
+    }
 
     &__content {
         @include absCenter;
-        
+
         width: 75%;
         background-color: $color-white;
-        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
         border-radius: 3px;
         display: table;
         overflow: hidden;
         opacity: 0;
-        -webkit-transform: translate(-50%, -50%) scale(.25);
-                transform: translate(-50%, -50%) scale(.25);
-        -webkit-transition: all .5s .2s;
-        transition: all .5s .2s;
+        -webkit-transform: translate(-50%, -50%) scale(0.25);
+        transform: translate(-50%, -50%) scale(0.25);
+        -webkit-transition: all 0.5s 0.2s;
+        transition: all 0.5s 0.2s;
+
+        @include respond(phone) {
+            padding: 3rem;
+        }
     }
 
     &__left {
         width: 33.333333%;
-       display: table-cell;
+        display: table-cell;
 
+        @include respond(phone) {
+            display: inline;
+        }
     }
 
     &__right {
@@ -40,12 +59,43 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(phone) {
+            display: inline;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
         height: auto;
+
+        @include respond(phone) {
+            display: inline-block;
+            width: 49%;
+        }
+
+        &-scale1 {
+            @include respond(phone) {
+                transform: scale(0.9);
+                -webkit-transform: scale(0.9);
+                -moz-transform: scale(0.9);
+                -ms-transform: scale(0.9);
+                -o-transform: scale(0.9);
+                box-shadow: 0 2rem 6rem rgba($color-black, 0.4);
+            }
+        }
+
+        &-scale {
+            @include respond(phone) {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+            }
+        }
     }
 
     &__text {
@@ -54,33 +104,33 @@
 
         -webkit-column-count: 2;
 
-           -moz-column-count: 2;
+        -moz-column-count: 2;
 
-                column-count: 2;
+        column-count: 2;
         -webkit-column-gap: 4rem;
-           -moz-column-gap: 4rem;
-                column-gap: 4rem;
+        -moz-column-gap: 4rem;
+        column-gap: 4rem;
         -webkit-column-rule: 1px solid $color-grey-light-2;
-           -moz-column-rule: 1px solid $color-grey-light-2;
-                column-rule: 1px solid $color-grey-light-2;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+        column-rule: 1px solid $color-grey-light-2;
 
         -webkit-hyphens: auto;
 
-            -ms-hyphens: auto;
+        -ms-hyphens: auto;
 
-                hyphens: auto;
+        hyphens: auto;
     }
 
-// oen state of the popus
+    // oen state of the popus
     &:target {
         opacity: 1;
         visibility: visible;
     }
-    
+
     &:target &__content {
         opacity: 1;
         -webkit-transform: translate(-50%, -50%) scale(1);
-                transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {

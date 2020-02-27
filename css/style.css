@@ -777,8 +777,20 @@ body {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .3s;
-  transition: all .3s; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .popup h2 {
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup h2 {
+        position: relative;
+        left: 7rem; } }
+  .popup .btn--purple {
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup .btn--purple {
+        position: relative;
+        left: 16rem; } }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -794,20 +806,57 @@ body {
     opacity: 0;
     -webkit-transform: translate(-50%, -50%) scale(0.25);
     transform: translate(-50%, -50%) scale(0.25);
-    -webkit-transition: all .5s .2s;
-    transition: all .5s .2s; }
+    -webkit-transition: all 0.5s 0.2s;
+    transition: all 0.5s 0.2s;
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        padding: 3rem; } }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        display: inline; } }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
-    padding: 3rem 5rem; }
+    padding: 3rem 5rem;
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        display: inline; } }
   .popup__img {
     display: block;
     width: 100%;
-    height: auto; }
+    height: auto;
+    /*600px*/ }
+    @media (max-width: 37.5em) {
+      .popup__img {
+        display: inline-block;
+        width: 49%; } }
+    .popup__img-scale1 {
+      /*600px*/ }
+      @media (max-width: 37.5em) {
+        .popup__img-scale1 {
+          transform: scale(0.9);
+          -webkit-transform: scale(0.9);
+          -moz-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          -o-transform: scale(0.9);
+          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4); } }
+    .popup__img-scale {
+      /*600px*/ }
+      @media (max-width: 37.5em) {
+        .popup__img-scale {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
