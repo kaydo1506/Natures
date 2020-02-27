@@ -11,19 +11,19 @@
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 
-    // h2 {
-    //     @include respond(phone) {
-    //         position: relative;
-    //         left: 7rem;
-    //     }
-    // }
+    h2 {
+        @include respond(phone) {
+            position: relative;
+            left: 7rem;
+        }
+    }
 
-    // .btn--purple {
-    //     @include respond(phone) {
-    //         position: relative;
-    //         left: 16rem;
-    //     }
-    // }
+    .btn--purple {
+        @include respond(phone) {
+            position: relative;
+            left: 16rem;
+        }
+    }
 
     &__content {
         @include absCenter;
