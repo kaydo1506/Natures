@@ -780,17 +780,17 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .popup h2 {
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup h2 {
-        position: relative;
-        left: 7rem; } }
+        padding-top: 2rem;
+        padding-bottom: 1rem; } }
   .popup .btn--purple {
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup .btn--purple {
         position: relative;
-        left: 16rem; } }
+        left: 12rem; } }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -808,15 +808,15 @@ body {
     transform: translate(-50%, -50%) scale(0.25);
     -webkit-transition: all 0.5s 0.2s;
     transition: all 0.5s 0.2s;
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup__content {
         padding: 3rem; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell;
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup__left {
         display: inline; } }
   .popup__right {
@@ -824,22 +824,22 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup__right {
         display: inline; } }
   .popup__img {
     display: block;
     width: 100%;
     height: auto;
-    /*600px*/ }
-    @media (max-width: 37.5em) {
+    /*900px*/ }
+    @media (max-width: 56.25em) {
       .popup__img {
         display: inline-block;
         width: 49%; } }
     .popup__img-scale1 {
-      /*600px*/ }
-      @media (max-width: 37.5em) {
+      /*900px*/ }
+      @media (max-width: 56.25em) {
         .popup__img-scale1 {
           transform: scale(0.9);
           -webkit-transform: scale(0.9);
@@ -848,8 +848,8 @@ body {
           -o-transform: scale(0.9);
           box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4); } }
     .popup__img-scale {
-      /*600px*/ }
-      @media (max-width: 37.5em) {
+      /*900px*/ }
+      @media (max-width: 56.25em) {
         .popup__img-scale {
           transform: scale(1);
           -webkit-transform: scale(1);

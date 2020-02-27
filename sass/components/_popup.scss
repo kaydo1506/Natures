@@ -12,16 +12,18 @@
     transition: all 0.3s;
 
     h2 {
-        @include respond(phone) {
-            position: relative;
-            left: 7rem;
+        @include respond(tab-port) {
+            // position: relative;
+            // left: rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
         }
     }
 
     .btn--purple {
-        @include respond(phone) {
+        @include respond(tab-port) {
             position: relative;
-            left: 16rem;
+            left: 12rem;
         }
     }
 
@@ -40,7 +42,7 @@
         -webkit-transition: all 0.5s 0.2s;
         transition: all 0.5s 0.2s;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             padding: 3rem;
         }
     }
@@ -49,7 +51,7 @@
         width: 33.333333%;
         display: table-cell;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: inline;
         }
     }
@@ -60,7 +62,7 @@
         vertical-align: middle;
         padding: 3rem 5rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: inline;
         }
     }
@@ -70,13 +72,13 @@
         width: 100%;
         height: auto;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: inline-block;
             width: 49%;
         }
 
         &-scale1 {
-            @include respond(phone) {
+            @include respond(tab-port) {
                 transform: scale(0.9);
                 -webkit-transform: scale(0.9);
                 -moz-transform: scale(0.9);
@@ -87,7 +89,7 @@
         }
 
         &-scale {
-            @include respond(phone) {
+            @include respond(tab-port) {
                 transform: scale(1);
                 -webkit-transform: scale(1);
                 -moz-transform: scale(1);
