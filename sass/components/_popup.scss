@@ -13,17 +13,22 @@
 
     h2 {
         @include respond(tab-port) {
-            // position: relative;
-            // left: rem;
-            padding-top: 2rem;
+            display: inline-block;
+            padding-top: 3rem;
             padding-bottom: 1rem;
+            font-size: 3rem;
+        }
+    }
+
+    h3 {
+        @include respond(tab-port) {
+            text-align: justify;
         }
     }
 
     .btn--purple {
         @include respond(tab-port) {
-            position: relative;
-            left: 12rem;
+            display: inline-block;
         }
     }
 
@@ -84,7 +89,7 @@
                 -moz-transform: scale(0.9);
                 -ms-transform: scale(0.9);
                 -o-transform: scale(0.9);
-                box-shadow: 0 2rem 6rem rgba($color-black, 0.4);
+                box-shadow: 0 2rem 6rem rgba($color-black, 0.2);
             }
         }
 
@@ -95,7 +100,7 @@
                 -moz-transform: scale(1);
                 -ms-transform: scale(1);
                 -o-transform: scale(1);
-                box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+                box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
             }
         }
     }
@@ -121,6 +126,11 @@
         -ms-hyphens: auto;
 
         hyphens: auto;
+
+        @include respond(tab-port) {
+            column-count: auto;
+            text-align: justify;
+        }
     }
 
     // oen state of the popus
